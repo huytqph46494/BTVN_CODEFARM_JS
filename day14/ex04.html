@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maskEmail(email){
+            let [local,domain] = email.split("@")
+            if(local.length<=4){
+                return email
+            }
+            let first2 = local.slice(0,2)
+            let last2 = local.slice(-2)
+            return `${first2}***${last2}@${domain}`
+        }
+        console.log(maskEmail("huytqph46494@fpt.edu.vn"))
+    </script>
+</body>
+</html>

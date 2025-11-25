@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function shortNumber(num){
+            if(num>=1_000_000){
+                let value = (num/1_000_000).toFixed(1)
+                value=value.replace(/\.0$/,"")
+                return value+ "M"
+            }
+            if(num>=1_000){
+                let value = (num/1_000).toFixed(1)
+                value = value.replace(/\.0$/,"")
+                return value +"K"
+            }
+            return num.toString()
+        }
+        console.log(shortNumber(1500))
+        console.log(shortNumber(2000000))
+        console.log(shortNumber(800))
+    </script>
+</body>
+</html>

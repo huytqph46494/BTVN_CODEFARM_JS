@@ -21,4 +21,6 @@ function printChrismasTree(n, character){
     let trunk = " ".repeat(n-1)+character
     console.log(trunk)
 }
-console.log("\n");
+
+printChrismasTree(5, "*");
+printChrismasTree(5,"o")
